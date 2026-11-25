@@ -78,16 +78,10 @@ Before deploying, configure a strong secret key and allowed hosts, use a product
 
 ## Tests
 
-Run the app tests from the `TODO_PROJECT/` directory:
-
-```bash
-python manage.py test ToDoApplication
-```
-
-The tests cover registration/profile creation, password mismatch handling, authentication requirements, task isolation between users, and task field validation.
+The repository currently has no implemented automated tests; `ToDoApplication/tests.py` is a Django test scaffold. Add tests for registration, authentication, task ownership, and task validation before relying on the app.
 
 ## Notes
 
 - Static JavaScript and styles use jQuery and Bootstrap from public CDNs, so those assets require an internet connection in the browser.
-- Registration currently validates the phone format in the browser. Server-side form validation should also be added before using this app in a public deployment.
+- Registration currently validates the phone format in the browser. Server-side phone format validation should also be added before using this app in a public deployment.
 - This is a learning project, not a hardened production service. Review configuration, input validation, privacy, and operational needs before exposing it to the internet.
